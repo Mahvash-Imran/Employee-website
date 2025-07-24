@@ -16,3 +16,7 @@ const employees = [
 const totalEmployees = employees.map((employee, index) => `<p>${employee.id}: ${employee.name}: ${employee.name} - ${employee.department} - $${employee.salary}</p>`).join('');
         document.getElementById('employeesDetails').innerHTML = totalEmployees;
   
+function calculateTotalSalaries() {
+      const totalSalaries = employees.reduce((acc, employee) => acc + employee.salary, 0);
+      alert(`Total Salaries: $${totalSalaries}`);
+    }
